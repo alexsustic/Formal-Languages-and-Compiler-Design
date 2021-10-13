@@ -1,0 +1,5 @@
+In Lexic.txt -> the operators could be more precisely specified (which operator is used for arithmetic/relational/assignment operation)
+             -> character rule , should be character = 'letter' | 'digit' (also in string rule)
+             -> letter could also be letter = "a" | "b" | … | “z" | "A" | "B" | .. | "Z" | (given the fact you also use upper case letter in Alphabet)
+
+In Syntax.txt  -> should be , iostmt = "READ" "(" IDENTIFIER ")" | "WRITE" "(" IDENTIFIER ")"
