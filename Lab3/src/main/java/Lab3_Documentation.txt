@@ -1,0 +1,29 @@
+FileOperations = a class used for performing operations on certain files
+    -> getTokensFromFile : a method for extracting all the tokens from a file, split by empty spaces and stored in an ArrayList
+    -> writeSymbolTable : a method for writing results in the symbol table file
+    -> writePIF: a method for writing results in the pif file
+
+Validator = a class used for validating tokens 
+    -> checkIfChar/checkIfString/verifyIfNumeric : methods used for identifying constants
+    -> checkIfIdentifier : method used for checking if a token is an identifier
+    -> checkIfIdentifierIsCorrect : method used for checking if an identifier is correctly written
+  
+PIF =  a class in which we store the token and the position of it in the symbolTable
+    
+SymbolTable = structered as a hash table, this class is used for storing unique tokens (constants/identifiers)
+            -> insert : method using for storing tokens into the hash table
+            -> getPosition : returns a pair of integers, representing the exact position of the token in the symbol table
+
+
+LexicalAnalyzer = a class which have as parameters a symbol table and a validator
+                = has the role to identify the type of the token and store both the token and its position
+                  in the symbolTable and in the pif
+               -> analyzer:
+                       1) create a pif and get all the tokens using the FileOperations class
+                       2) for each token checks if it's a constant/identifier 
+                       3) if so , it stores the element in the symbol table
+                       4) it also check in case of an identifier if it's correctly written,
+                            if not, it throws an exception
+                       5) store the position of the token in the pif
+                       6) write the results in both files (symbolTableFile/pifFile)
+                        
