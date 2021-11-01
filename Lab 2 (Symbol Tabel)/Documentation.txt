@@ -1,9 +1,0 @@
-The symbolTable is represented as an array of nodes.
-Each node contains a value and a reference to the next node.
-When we want to insert a value to the symbolTable we respect the following steps:
-    1) we extract the position corresponding to that value using a hash function (getPosition())
-    2) we build the node which is going to be inserted
-    3) we check if the element from the position obtained is empty, if so , we initialise it with that node 
-    4) if not, we parse the list of next nodes until we reach the last element, and we initialise its next reference with that node
-            (while parsing, we check if we have that value already inserted, if so , we return -1)
-    5) we return the position obtained
