@@ -1,0 +1,17 @@
+program {
+def int a ;
+def int b ;
+def int c ;
+def int max = 0 ;
+check ( a > b ) then
+   check ( a > c ) then
+        max = a ;
+   else
+        max = c ;
+else
+   check ( b > c ) then
+        max = b ;
+   else
+        max = c ;
+print ( max ) ;
+}
